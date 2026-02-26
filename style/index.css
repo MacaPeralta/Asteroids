@@ -1,0 +1,417 @@
+/* ============ Winter 2024 EECS 493 Assignment 3 Starter Code ============ */
+
+/* Main Containers */
+body,
+button {
+  font-family: VT323;
+}
+
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+}
+
+/* Game Section */
+#actual-game {
+  height: 720px;
+  width: 1280px;
+  background-color: white;
+  z-index: 10;
+  right: 0px;
+  top: 0px;
+}
+
+.curAsteroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAsteroid img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+/* ============ Winter 2024 EECS 493 Assignment 2 Starter Code ============ */
+
+
+
+#landing-header {
+  width: 100%;
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px;
+  color: white;
+  text-align: center; /* center this code (placed in style) */
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#landing-page{
+  text-align: center;
+  background-image: url('../src/frontpage_background.jpg');
+  height: 100%;
+
+
+}
+
+#landing-page button{
+  margin-top: 100px;
+  width: 200px;
+  height: 100px;
+  background-color: darkslateblue;
+  margin: 50px 5px;
+  color: white;
+  border: 2px solid transparent;
+
+}
+
+
+#landing-header img{
+  height: 100%;
+}
+
+.panel {
+  display: none;
+  width: 600px;
+  height: 690px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: darkslateblue; 
+  color: white;
+  border: 5px solid white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-heading {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.panel-content h3 {
+  font-size: 1.5em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+
+
+}
+
+#volume-slider {
+  width: 80%;
+  margin: 10px 0;
+}
+
+
+.start-game{
+  background-color: gainsboro;
+}
+
+
+.difficulty-button {
+  width: 180px;
+  height: 100px;
+  margin: 0px;
+  background-color: purple;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.difficulty-button.selected {
+  border-color: yellow;
+}
+
+.close-btn {
+  width: 180px;
+  height: 100px;
+  margin-top: 10px;
+  background-color: purple;
+  color: white;
+  align-self: center;
+}
+
+
+#volume-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+#volume-value{
+  margin: 0 10px;
+}
+
+
+/* Hidden class for initially hiding elements */ 
+.hidden {
+  visibility: hidden;
+  z-index: -1;
+}
+
+/* Style for the tutorial page */
+#tutorial-page {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background: white; 
+  
+}
+
+#tutorial-page button{
+  position: absolute; 
+  margin-top: 100px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  margin: 0px 5px;
+  color: black;
+  border: 2px solid black;
+
+}
+
+
+
+
+#asteroid{
+  width: 125px; 
+  height: auto;
+}
+
+
+
+/* For bold text */
+.bold {
+  font-weight: 1000;
+  
+}
+
+/* For italic text */
+.italic {
+  font-style: italic;
+  
+}
+
+
+
+.large-text {
+  font-size: 75px; 
+}
+
+
+.small-text {
+  font-size: 50px  ; 
+}
+
+/* Splash Screen Styles */
+#splash-screen {
+  height: 90vh; 
+  width: 90vw; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white; 
+  z-index: 10; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#splash-screen.hidden {
+  display: none;
+  align-items: center;
+  justify-content: center;   
+}
+
+#splash-content h1 {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 75px;
+  margin-top: 200px;
+  
+}
+
+#splash-content p {
+  font-size: 50px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  padding-top: 100px;
+  
+  
+}
+
+.arrow {
+  
+  display: block;     
+  margin: auto;        
+  padding-top: 100px; 
+  
+}
+
+#scoreboard {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+  z-index: 1;
+  display: block;
+}
+
+.score-item {
+  margin-bottom: 10px; 
+}
+
+.score-label {
+  font-size: 50px;
+  margin: 0;
+  color: black;
+}
+
+.score-value {
+  display: block;
+  font-size: 40px;
+  color: darkslateblue;
+  margin-top: 5px;
+}
+
+
+#spaceship {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+#spaceship img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+
+.shield {
+  
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+.shield img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.portal {
+  
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.portal img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+#game-over-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../src/frontpage_background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+#game-over-container {
+  background: darkslateblue;
+  color: white;
+  padding: 40px;
+  width: 50%;
+  height: 35%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
